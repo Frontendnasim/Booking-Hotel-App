@@ -337,6 +337,16 @@
   border: 1px solid var(--text-400);
 }
 
+.btn--back:hover {
+  transition: 0.2s ease-in;
+  background-color: var(--primary-600);
+  color: var(--text-100);
+}
+
+.bookmarkHeading {
+  margin: 2rem 0;
+}
+
 .formControl .flag {
   position: absolute;
   right: 1rem;
