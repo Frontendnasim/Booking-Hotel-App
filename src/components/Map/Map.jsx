@@ -7,16 +7,16 @@ import {
   useMapEvent,
 } from "react-leaflet";
 import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useGeoLocation from "../../hooks/useGeoLocation";
 import useUrlLocation from "../../hooks/useUrlLocation";
 
 function Map({ markerLocations }) {
-  const [mapCenter, setMapCenter] = useState([50, 4]);
+  const [mapCenter, setMapCenter] = useState([20, 4]);
   const [lat, lng] = useUrlLocation();
   const {
     isLoading: isLoadingPosition,
-    position: geolocationPosition,
+    position: geoLocationPosition,
     getPosition,
   } = useGeoLocation();
 
@@ -25,21 +25,20 @@ function Map({ markerLocations }) {
   }, [lat, lng]);
 
   useEffect(() => {
-    if (geolocationPosition?.lat && geolocationPosition?.lng) {
-      setMapCenter([geolocationPosition.lat, geolocationPosition.lng]);
-    }
-  }, [geolocationPosition]);
+    if (geoLocationPosition?.lat && geoLocationPosition?.lng)
+      setMapCenter([geoLocationPosition.lat, geoLocationPosition.lng]);
+  }, [geoLocationPosition]);
 
   return (
     <div className="mapContainer">
       <MapContainer
         className="map"
         center={mapCenter}
-        zoom={13}
+        zoom={6}
         scrollWheelZoom={true}
       >
         <button onClick={getPosition} className="getLocation">
-          {isLoadingPosition ? "Loading ..." : "Use Your Location"}
+          {isLoadingPosition ? "Loading ..." : " Use Your Location"}
         </button>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -53,11 +52,9 @@ function Map({ markerLocations }) {
           </Marker>
         ))}
       </MapContainer>
-      ,
     </div>
   );
 }
-
 export default Map;
 
 function ChangeCenter({ position }) {
