@@ -1332,6 +1332,42 @@
       "longitude": "1.7298698216548796",
       "host_location": "Kidal Mali",
       "id": 1
+    },
+    {
+      "cityName": "Township of Rush",
+      "country": "United States of America (the)",
+      "countryCode": "US",
+      "latitude": "40.90984376665018",
+      "longitude": "-78.02490234375001",
+      "host_location": "Township of Rush United States of America (the)",
+      "id": 2
+    },
+    {
+      "cityName": "Juventino Rosas",
+      "country": "Mexico",
+      "countryCode": "MX",
+      "latitude": "20.57403370328837",
+      "longitude": "-101.00830078125",
+      "host_location": "Juventino Rosas Mexico",
+      "id": 4
+    },
+    {
+      "cityName": "Tichit",
+      "country": "Mauritania",
+      "countryCode": "MR",
+      "latitude": "18.38552488925613",
+      "longitude": "-8.964843750000002",
+      "host_location": "Tichit Mauritania",
+      "id": 5
+    },
+    {
+      "cityName": "Tchirozerine",
+      "country": "Niger (the)",
+      "countryCode": "NE",
+      "latitude": "17.779668986692347",
+      "longitude": "9.514160156250002",
+      "host_location": "Tchirozerine Niger (the)",
+      "id": 6
     }
   ]
 }

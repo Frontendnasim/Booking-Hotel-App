@@ -47,6 +47,13 @@
   color: var(--rose-500);
 }
 
+.bookmarkIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  color: var(--primary-600);
+}
+
 .guestOptions {
   background-color: #fff;
   box-shadow: 0 0 10px #efefef;
